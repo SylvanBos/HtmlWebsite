@@ -1,6 +1,71 @@
 body{
+    --background-color1: #ffc8a1;
+    --background-color2: #f8d5ba;
+    --background-color: linear-gradient(90deg, var(--background-color1), var(--background-color2));
+    --text-color: grey;
+    --nav-background-color: #15002c;
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    color: var(--text-color);
+    background: var(--background-color);
     margin: 0;
-    padding: 0;
+    padding: 20px;
+}
+
+.nav-container {
+    background-color: var(--nav-background-color);
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+#nav-button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 0 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    a {
+        color: white;
+        text-decoration: none;
+    }
+}
+
+#nav-button:hover {
+    background-color: #6A4C3B;
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.hero-button {
+    background: linear-gradient(45deg, hsl(23, 100%, 61%), #ffd0ad);
+    box-shadow: 0px 1px 1px #000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 13px;
+    a {
+        color: white;
+        text-decoration: none;
+    }
+}
+
+.hero-button:hover {
+    background: linear-gradient(45deg, #ffb27c, #ffd8bb);
+    box-shadow: 0px 1px 2px #000;
 }
