@@ -3,44 +3,62 @@ body{
     --background-color2: #f8d5ba;
     --background-color: linear-gradient(90deg, var(--background-color1), var(--background-color2));
     --text-color: grey;
-    --nav-background-color: #15002c;
+    --nav-text-color: rgb(68, 68, 68);
+    --nav-background-color: rgba(255, 255, 255, 0.2);
+    --footer-background-color: rgba(0, 0, 0, 0.3);
     font-family: Arial, sans-serif;
     color: var(--text-color);
     background: var(--background-color);
     margin: 0;
-    padding: 20px;
+    padding: 150px 20px;
 }
 
 .nav-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     background-color: var(--nav-background-color);
-    padding: 10px;
+    padding: 20px;
     margin-bottom: 20px;
-    border-radius: 20px;
+    color: var(--text-color);
+    button {
+        color: var(--text-color)!important;
+    }
 }
 
 #nav-button {
     background-color: transparent;
-    color: white;
+    color: var(--nav-text-color);
     border: none;
     padding: 10px 15px;
-    margin: 0 5px;
+    margin: 0px 5px;
     border-radius: 10px;
     cursor: pointer;
     text-decoration: none;
-    a {
-        color: white;
-        text-decoration: none;
-    }
+    transition: 300ms;
 }
 
 #nav-button:hover {
-    background-color: #6A4C3B;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: white;
+    transition: 300ms;
 }
 
 .hero-container {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 80px;
+}
+
+.hero-text {
+    max-width: 600px;
+    font-size: 18px;
+    line-height: 1.6;
 }
 
 .buttons-container {
@@ -51,6 +69,8 @@ body{
 }
 
 .hero-button {
+    width: 170px;
+    height: 35px;
     background: linear-gradient(45deg, hsl(23, 100%, 61%), #ffd0ad);
     box-shadow: 0px 1px 1px #000;
     color: white;
@@ -59,13 +79,34 @@ body{
     border-radius: 10px;
     cursor: pointer;
     font-size: 13px;
-    a {
-        color: white;
-        text-decoration: none;
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    color: white;
+    text-decoration: none;
 }
 
 .hero-button:hover {
     background: linear-gradient(45deg, #ffb27c, #ffd8bb);
     box-shadow: 0px 1px 2px #000;
+}
+
+.github-image {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+footer {
+    position: absolute;
+    text-align: center;
+    margin-left: -20px;
+    min-height: 200px;
+    padding: 20px;
+    background-color: var(--footer-background-color);
+    width: 100%;
+    transform: translateY(100%);
 }
